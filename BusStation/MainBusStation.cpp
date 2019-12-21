@@ -1,30 +1,41 @@
-﻿#include <iostream>
-#include "String"
+#include <iostream>
 #include <algorithm>
 #include <fstream>
-#include <iostream>
 #include <iterator>
 #include <sstream>
 #include <string>
 #include <windows.h>
 #include "stdio.h"
 #include <time.h>
+#include "BusLines.h"
 #include <vector>
 
 using namespace std;
+
+void choiceReservation() {
+    cout << "   Welcome to SuperBus  " << endl;
+    cout << "---------------------------------------" << endl;
+    cout << "Make a choice:" << endl;
+    cout << "Press 1 to view the list of all lines:" << endl;
+    cout << "Press 2 to view the list of all lines by region:" << endl;
+    cout << "Press Another number to cancel:" << endl;
+    cout << "---------------------------------------" << endl;
+}
 
 
 int main()
 {
     vector<vector<string> > values;
     vector<string> valueline;
+    vector<string> visited;
 
-
+    int x, y;
         ifstream fin("C:\\BootCamp\\busStation\\suprBus.csv");
         string item;
         for (string line; getline(fin, line); )
         {
             istringstream in(line);
+
 
             while (getline(in, item, ','))
             {
@@ -36,15 +47,13 @@ int main()
         }
 
         fin.close();
+        choiceReservation();
 
-        int i = 0;
+        cin >> x;
 
-        for (i = 0; i < values.size(); i++) {
-            for (int j = 0; j < values[i].size(); j++) {
-               cout<< values[i][j]<<endl;
-
-            }
-            cout << endl;
+        if (x == 1) {
+            cout << "list of all lines:" << endl;
+            BusLines L1(values);
         }
-
+        
  }
