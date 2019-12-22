@@ -7,16 +7,15 @@ class BusLines
 {
 public:
 
-	BusLines(vector<vector<string> >& values);
+	BusLines(vector<vector<string>>& values);
+	BusLines(vector<vector<string> >& values, string AreaCode);
 	~BusLines();
-	void setBusLines(string t);
-	string getBusLines();
-
+	void setBusLines(vector<vector<string>>& values);
+	void setRegions(vector<vector<string>>& values, string AreaCode);
+	void printLineNum();
 
 private:
-	string IdBusLines;
 	vector<string> visited;
-
-	
+	vector<string> vLineNum;
+	vector<string> vAreaCode;
 };
-
