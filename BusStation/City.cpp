@@ -7,12 +7,12 @@ City::City()
 }
 City::City(string CityId)
 {
-//to do
+	//to do
 }
 void City::setCity(string CityId, string AreaCode, string ApartmentNumber, string Province)
 {
 	this->CityId = CityId;
-	this->AreaCode=AreaCode;
+	this->AreaCode = AreaCode;
 	this->ApartmentNumber = ApartmentNumber;
 	this->Province = Province;
 }
@@ -40,7 +40,7 @@ string City::getStreet()
 string City::getApartmentNumber()
 {
 	return ApartmentNumber;
- }
+}
 
 
 string City::getProvince()
@@ -52,14 +52,3 @@ City::~City()
 {
 	///to do
 }
-
-
-/*
-	City();
-	City(string CityName);
-	~City();
-private:
-	string Id;
-	string CityName;
-	string Street;
-	int  ApartmentNumber;*/
