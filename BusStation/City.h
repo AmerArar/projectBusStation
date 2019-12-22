@@ -21,9 +21,5 @@ private:
 	//string CityName;
 	//string Street;
 	string  ApartmentNumber;
-	string Province; //îçåæ
+	string Province; //×ž×—×•×–
 };
-
-
-
-
